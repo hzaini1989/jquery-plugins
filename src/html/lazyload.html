@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片懒加载</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .zHide{
+            display: none;
+        }
+        div{
+            /*height: 400px;*/
+        }
+        div img{
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="height: 500px"></div>
+
+    <div class="imgs">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+    </div>
+    <div class="imgs">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+    </div>
+    <div class="imgs">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+    </div>
+    <div class="imgs">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+    </div>
+    <div class="imgs">
+        <div>
+            <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+            <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+            <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+            <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        </div>
+        <div>
+            <div>
+                <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+                <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+                <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+                <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+            </div>
+        </div>
+    </div>
+
+    <a href="">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+        <img src="../images/no.png" alt="" data-src="../images/1.jpg" class="lazyimg">
+    </a>
+
+
+
+
+
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+    console.log($('.lazyimg').length);
+
+    $('.lazyimg').lazyload({
+        time:400,
+        callback:function(){
+            console.log(11)
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

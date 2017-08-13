@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .zHide{
+            display: none;
+        }
+        ul li{
+            list-style: none;
+        }
+        .week-list{
+            width: 490px;
+            overflow: hidden;
+        }
+        .week-list li{
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+        }
+        .box-center .calendar-box{
+            width: 490px;
+        }
+        .box-center .calendar-box .day-list{
+            overflow: hidden;
+        }
+        .box-center .calendar-box .day-list li{
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="uzai-calender">
+
+    <div class="calendar-week">
+        <ul class="week-list"></ul>
+    </div>
+
+    <div class="container-center">
+        <div class="swiper-wrapper box-center" id="list">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+    $('.container-center').getCalendar({
+        time:'2017-07'
+    });
+    $('.container-center').getCalendar({
+        time:'2017-08'
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息间歇不停滚动</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .zHide{
+            display: none;
+        }
+        .inter-rolling .conts{
+            overflow: hidden;
+            height: 200px;
+            /*line-height: 22px;*/
+            width: 100px;
+        }
+        .inter-rolling .conts .ul-cont li{
+            height: 100px;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="inter-rolling">
+    <div class="conts">
+        <ul class="ul-cont">
+            <li><a href="">众信旅游-张先生</a><b>啊DSL飞机啊善良的肌肤发生的就发了快速减肥的啊电视里看风景啊说发</b></li>
+            <li><a href="">高级会员-李女生</a><b>dasf为佛教活动舒服 读法律上看风景净空法师的肌肤</b></li>
+            <li><a href="">众信金牌-王先生</a><b>我们地方都是中国人</b></li>
+            <li><a href="">众信旅游-张先生</a><b>最近停售,日本军方有话有啊哈</b></li>
+            <li><a href="">众信银牌-皇甫先生</a><b>香港,台湾</b></li>
+            <li><a href="">众信金牌-刘先生</a><b>中国人们即放假</b></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+    $('.inter-rolling').interRolling({
+        offset:-100,
+        speed:500,// 滚动的的速度
+        isHover:true// 默认是true,鼠标划过的时候不滚动
+    });
+
+</script>
+
+
+</body>
+</html>

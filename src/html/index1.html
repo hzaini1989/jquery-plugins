@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab切换</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .tab-container{width: 1000px;margin: 0 auto}
+        .tab-container .tab-bar{overflow: hidden}
+        .tab-container .tab-bar b{float: left;width: 100px;text-align: center;height: 50px;line-height: 50px;cursor: pointer;background: #0086B3;color: #fff;}
+        .tab-container .tab-bar b.choose-active{background: #fff;color: #000;}
+        .tab-container .tab-bar b.current{background: #fff;color: #000;}
+        .zHide{display: none}
+        .tab-container .tab-conts .nums{}
+        .tab-container .tab-conts{border: 1px solid #ddd;width: 400px;height: 600px;text-align: center;line-height: 600px;font-size: 30px;}
+    </style>
+</head>
+<body>
+<!--<div  id="registerForm">-->
+    <!--请输入用户名:<input type="text" name="userName" id="userName"/><br/>-->
+    <!--请输入密码:<input type="text" name="password" id="password"/><br/>-->
+    <!--请输入手机号:<input type="text" name="phoneNumber" id="phoneNumber"/><br/>-->
+
+    <!--<button>提交</button>-->
+
+<!--</div>-->
+
+    <!--<div id="ex-div">-->
+        <!--<p><b>刘德华</b></p>-->
+        <!--<p><b>张学友</b></p>-->
+        <!--<p><b>黎明</b></p>-->
+        <!--<p><b>郭富城</b></p>-->
+    <!--</div>-->
+
+    <div class="tab-container tab1">
+        <ul class="tab-bar">
+            <b>我是按钮1</b>
+            <b>我是按钮2</b>
+            <b>我是按钮3</b>
+            <b>我是按钮4</b>
+        </ul>
+        <div class="tab-conts">
+            <div class="nums">
+                我是内容1
+            </div>
+            <div class="nums zHide">
+                我是内容2
+            </div>
+            <div class="nums zHide">
+                我是内容3
+            </div>
+            <div class="nums zHide">
+                我是内容4
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-container tab2">
+        <ul class="tab-bar">
+            <b>我是按钮1</b>
+            <b>我是按钮2</b>
+            <b>我是按钮3</b>
+            <b>我是按钮4</b>
+        </ul>
+        <div class="tab-conts">
+            <div class="nums">
+                我是内容1
+            </div>
+            <div class="nums zHide">
+                我是内容2
+            </div>
+            <div class="nums zHide">
+                我是内容3
+            </div>
+            <div class="nums zHide">
+                我是内容4
+            </div>
+        </div>
+    </div>
+    <div class="tab-container tab3">
+        <ul class="tab-bar">
+            <b>我是按钮1</b>
+            <b>我是按钮2</b>
+            <b>我是按钮3</b>
+            <b>我是按钮4</b>
+        </ul>
+        <div class="tab-conts">
+            <div class="nums">
+                我是内容1
+            </div>
+            <div class="nums zHide">
+                我是内容2
+            </div>
+            <div class="nums zHide">
+                我是内容3
+            </div>
+            <div class="nums zHide">
+                我是内容4
+            </div>
+        </div>
+    </div>
+    <div class="tab-container tab4">
+        <ul class="tab-bar">
+            <b class="current">我是按钮1</b>
+            <b>我是按钮2</b>
+            <b>我是按钮3</b>
+            <b>我是按钮4</b>
+        </ul>
+        <div class="tab-conts">
+            <div class="nums">
+                我是内容1
+            </div>
+            <div class="nums zHide">
+                我是内容2
+            </div>
+            <div class="nums zHide">
+                我是内容3
+            </div>
+            <div class="nums zHide">
+                我是内容4
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+
+$('.tab1').changeTab({
+    event:'mouseover',
+    activeClass:'current'// 默认是'choose-active',
+});
+
+$('.tab2').changeTab({
+    event:'click',
+    activeClass:'current'// 默认是'choose-active',
+});
+
+$('.tab3').changeTab({
+    event:'click',
+    activeClass:'current',// 默认是'choose-active',
+    callback:function(){
+        alert('我是回调哦!');
+    }
+});
+$('.tab4').changeTab({
+    auto:3000,
+    activeClass:'current'// 默认是'choose-active',
+});
+
+
+</script>
+
+</body>
+</html>

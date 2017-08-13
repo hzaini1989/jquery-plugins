@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗显示与隐藏</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .popup-bg{background: rgba(0,0,0,.6);width: 100%;height: 100%;position: fixed;
+            top:0;
+            left: 0;
+        }
+        .plug-popup .popup-conts{
+            width: 400px;
+            height: 400px;
+            background: #fff;
+            border:1px solid #ddd;
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin: -200px 0 0 -200px;
+            z-index: 2;
+        }
+        .plug-popup .popup-conts b.close{
+            font-size: 30px;
+            position: absolute;
+            right: 30px;
+            top:30px;
+            cursor: pointer;
+        }
+        .zHide{
+            display: none;
+        }
+        .popup-btn{
+            display: block;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 100px auto;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!--弹窗-->
+    <div class="plug-popup">
+        <!--弹窗-->
+        <div class="popup-conts zHide">
+            <b class="close">x</b>
+        </div>
+    </div>
+    <!--按钮-->
+    <b class="popup-btn">点击我</b>
+    <!--背景-->
+    <div class="popup-bg zHide"></div>
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+$('.plug-popup').setPopUp({
+    event:'click',
+    callback:function(){
+        console.log(2);
+    }
+});
+
+
+</script>
+
+</body>
+</html>

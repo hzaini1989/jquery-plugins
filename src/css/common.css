@@ -1,0 +1,30 @@
+html,body,div,p,ul,li,a,h1,h2,h3,h4,h5,h6,dl,dd,dt,span,table,td,tbody,text,textarea,tfoot,th,thead,tr,header,footer,article,iframe,address,applet,area,aside,audio,video,b,br,button,input,form,head,nav,ol,object,option,optgroup,pre,progress,s,em,i,strong,sub,sup,summary,tt,section,canvas{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+}
+ul li{
+    list-style: none;
+}
+b{
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+}
+.uzai-trabg{
+    background: #000;
+    opacity: .6;
+    filter:Alpha(opacity=60);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+

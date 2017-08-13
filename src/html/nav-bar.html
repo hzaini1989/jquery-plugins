@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能导航栏</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .zHide{
+            display: none;
+        }
+        .just-height{
+            height: 700px;
+        }
+        .nav-bar{
+            width: 100px;
+            height: 130px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin: -65px 0 0 -600px;
+        }
+        .nav-bar .bar-sin{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            background: #ddd;
+            display: block;
+            cursor: pointer;
+        }
+        .nav-bar .active{
+            background: #4183c4;
+            color:#fff;
+        }
+        .nav-content{
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!--导航栏-->
+    <div class="nav-bar zHide">
+        <div class="bar-conts">
+            <b class="bar-sin">我是按钮1</b>
+            <b class="bar-sin">我是按钮2</b>
+            <b class="bar-sin">我是按钮3</b>
+            <b class="bar-sin">我是按钮4</b>
+        </div>
+    </div>
+
+    <!--头部内容&#45;&#45;可以删除-->
+    <div class="just-height"></div>
+
+
+    <!--内容-->
+    <div class="nav-content">我是内容1</div>
+    <div class="nav-content">我是内容2</div>
+    <div class="nav-content">我是内容3</div>
+    <div class="nav-content">我是内容4</div>
+
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+$('.nav-bar').getNavBar({
+    event:'click'
+});
+
+
+
+</script>
+
+</body>
+</html>

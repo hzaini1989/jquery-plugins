@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>返回顶部</title>
+    <meta name="description" content="eee">
+    <style>
+        *{margin: 0;padding: 0}
+        .zHide{
+            display: none;
+        }
+        .go-top{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 12px;;
+            position: fixed;
+            right:50px;
+            bottom:100px;
+            border:1px solid #ddd;
+            cursor: pointer;
+        }
+        .just-height{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="just-height"></div>
+
+    <div class="go-top">
+        回到顶部
+    </div>
+
+
+<script src="../js/jquery-1.10.2.min.js"></script>
+<!--<script src="../../dist/all.js"></script>-->
+<script src="../js/index.js"></script>
+<script>
+
+$('.go-top').goTop({
+    event:'click',
+    isHide:true,
+    callback:function(){
+        console.log(1)
+    }
+});
+
+
+
+</script>
+
+</body>
+</html>
